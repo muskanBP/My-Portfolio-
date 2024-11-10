@@ -1,0 +1,92 @@
+/* Home.module.css */
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f2e1f3, #d9ecff, #e0f7fa);
+  min-height: 100vh;
+}
+
+.nav {
+  margin: 20px 0;
+}
+
+.ballContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.ball {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #ff4b1f, #1fddff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  animation: bounce 2s infinite ease-in-out;
+  font-size: 20px;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(150px);
+  }
+}
+
+/* Background Shapes */
+.backgroundShape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 0;
+  animation: float 25s linear infinite;
+}
+
+.shape1 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #ffe7e7, #ffafbd);
+  top: 15%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, #daf7dc, #a0e4ff);
+  bottom: 10%;
+  right: -15%;
+  animation-delay: 8s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}

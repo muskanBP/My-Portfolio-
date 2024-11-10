@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+  }
+  
